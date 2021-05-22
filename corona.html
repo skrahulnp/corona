@@ -23,6 +23,7 @@
                 background-color: darkblue;
                 display: flex;
                 color: #fff;
+                padding-bottom: 20px;
             }
 
             .input{
@@ -126,8 +127,16 @@
         firebase.database().ref('users/' + userId).set({
           username: name,
           email: email,
-        });
-      }
+        },(error) => {
+  if (error) {
+   console.log("Something went wrong!")
+  } else {
+    window.location = "welcome.html";
+  }
+  });
+
+    }
+
 </script>
      
 </body>
