@@ -118,8 +118,10 @@
   function getData(){ 
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-
-    writeUserData(username,username,password);
+    
+      if(username!=""&&password!=""){
+             writeUserData(username,username,password);
+      }
 }
 
 
